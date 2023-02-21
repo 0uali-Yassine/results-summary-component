@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600&display=swap" rel="stylesheet">
+  <title>Results summary component</title>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        },
+        fontFamily:{
+          'sans':['Hanken Grotesk', 'sans-serif'],
+        }
+      }
+    }
+  </script>
+
+   <style type="text/tailwindcss">
+    @layer components {
+      .Reaction,.Memory,.Verbal,.Visual{
+        display: flex;
+        justify-content: space-between;
+        padding: 12px;
+        width: 90%;
+        border-radius: 10px;
+      }
+      .all{
+        display: flex;
+        flex-direction: column;
+        height: 250px;
+        justify-content: space-around;
+      }
+    }
+  </style>
+
+</head>
+<body class="font-sans">
+  <main class="w-[638px] h-[450px] mt-[10%]  m-auto flex justify-between max-[412px]:w-full max-[646px]:flex-col max-[646px]:mt-0 max-[646px]:h-full max-[646px]:w-[80%] shadow-xl shadow-blue-500/25  rounded-[30px]">
+    <!--for the first left-->
+    <div class=" first_1  w-[300px] h-full p-[20px] flex flex-col justify-between items-center bg-gradient-to-b from-[#7857ff] to-[#2e2be9] rounded-[30px] max-[412px]:w-full max-[412px]:rounded-t-none   max-[646px]:m-auto">
+      <h1 class="text-gray-300 text-[20px]">Your Result</h1>
+      <div class="circle rounded-full text-center flex flex-col justify-center  bg-gradient-to-b from-[#4e21ca] to-[#2e2be900]  w-[190px] h-[190px]">
+        <h1 class="text-white text-[49px]">76</h1>
+        <h2 class="text-gray-400 text-[12px]">of 100</h2>
+      </div>
+      <h1 class="text-[30px] text-white">Great</h1>
+      <p class="text-center text-gray-300 w-[250px]">You scored higher than 65% of the people who have taken these tests.</p>
+    </div>
+    <!-- for the secound right-->
+    <div class="w-[320px] flex flex-col justify-around pt-[6px] max-[412px]:w-full  max-[646px]:m- max-[646px]:w-full">
+
+      <h1 class="text-[#0a0923] text-[20px] font-bold">Summary</h1>
+      <div class="all">
+
+        <div class="Reaction bg-[#ff575712]">
+          <div class="flex justify-between w-[90px]">
+            <span class="for_icon bg-[url('/assets/images/icon-reaction.svg')] w-[20px] h-[20px]"></span>
+            <h1 class="text-[#ff5757]">Reaction</h1>
+          </div>
+          <div>
+            <h1>80<span class="text-gray-400"> / 100</span></h1>
+          </div>
+        </div>
+
+        <div class="Memory bg-[#ffb01f12]">
+          <div class="flex justify-between w-[90px]">
+            <span class="for_icon bg-[url('/assets/images/icon-memory.svg')] w-[20px] h-[20px]"></span>
+            <h1 class="text-[#ffb01f]">Memory</h1>
+          </div>
+          <div>
+            <h1>92<span class="text-gray-400"> / 100</span></h1>
+          </div>
+        </div>
+
+        <div class="Verbal bg-[#00bd9112]">
+          <div class="flex justify-between w-[80px]">
+            <span class="for_icon bg-[url('/assets/images/icon-verbal.svg')] w-[20px] h-[20px]"></span>
+            <h1 class="text-[#00bd91]">Verbal</h1>
+          </div>
+          <div>
+            <h1>61<span class="text-gray-400"> / 100</span></h1>
+          </div>
+        </div>
+
+        <div class="Visual bg-[#1125d412]">
+          <div class="flex justify-between w-[80px]">
+            <span class="for_icon bg-[url('/assets/images/icon-visual.svg')] w-[20px] h-[20px]"></span>
+            <h1 class="text-[#1125d4]">Visual</h1>
+          </div>
+          <div>
+            <h1>72<span class="text-gray-400"> / 100</span></h1>
+          </div>
+        </div>
+
+      </div>
+
+      <button class=" bg-slate-700 hover:bg-[#2e2be9] text-white w-[290px] h-[50px] mb-[17px] rounded-[30px] max-[646px]:self-center">Continue</button>
+    </div>
+  </main>
+</body>
+</html>
